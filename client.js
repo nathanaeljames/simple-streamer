@@ -1,6 +1,6 @@
 //================= CONFIG =================
 // Global Variables
-let websocket_uri = 'wss://api.merakischools.com:443';
+let websocket_uri = 'ws://127.0.0.1:9001';
 let bufferSize = 4096,
     AudioContext,
     context,
@@ -58,12 +58,12 @@ function stopRecording() {
 function initWebSocket() {
     // Create WebSocket
     websocket = new WebSocket(websocket_uri);
-    console.log("Websocket created...");
+    //console.log("Websocket created...");
   
     // WebSocket Definitions: executed when triggered webSocketStatus
     websocket.onopen = function() {
       console.log("connected to server");
-      websocket.send("CONNECTED TO YOU");
+      //websocket.send("CONNECTED TO YOU");
       document.getElementById("webSocketStatus").innerHTML = 'Connected';
     }
     
@@ -73,7 +73,8 @@ function initWebSocket() {
     }
     
     websocket.onmessage = function(e) {
-      console.log("message received: " + e.data);
+      //console.log("message received: " + e.data);
+      console.log(e.data);
   
       try {
         result = JSON.parse(e.data);
