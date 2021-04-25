@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src='jquery-1.8.3.js'></script>
+    <script src='client.js'></script>
+  </head>
+
+  <body>
+    <div class='message'>Welcome!</div>
+       <!--
+    <button id="startRecButton" type="button"> Start recording</button>
+    <button id="stopRecButton" type="button"> Stop recording</button>
+ 
+    <button class="buttonStart">Start</button>
+    <button class="buttonStop">Stop</button>
+    -->
+    <button onclick='startRecording()'>Start recording</button>
+    <button onclick='stopRecording()'>Stop recording</button>
+    <br/>
+    <div>WebSocket: <span id="webSocketStatus">Not Connected</span></div>
+  </body>
+</html>
